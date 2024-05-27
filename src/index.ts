@@ -6,7 +6,7 @@ import express = require('express');
 
 const port: number | string = process.env.PORT || 8080;
 const app = express();
-const requestLimit: string = process.env.LIMIT || '100kb';
+const requestLimit: string = process.env.LIMIT || '1gb';
 
 app.use(bodyParser.json({ limit: requestLimit }));
 app.use(cors());
