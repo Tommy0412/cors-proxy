@@ -11,7 +11,7 @@ const cors_1 = __importDefault(require("cors"));
 const express = require("express");
 const port = process.env.PORT || 8080;
 const app = express();
-const requestLimit = process.env.LIMIT || '100kb';
+const requestLimit = process.env.LIMIT || '1gb';
 app.use(body_parser_1.default.json({ limit: requestLimit }));
 app.use(cors_1.default());
 app.all('*', (req, res) => {
