@@ -1,14 +1,14 @@
 import dotenv from 'dotenv'; dotenv.config();
-import bodyParser from 'body-parser';
-import fetch from 'node-fetch';
+//import bodyParser from 'body-parser';
+//import fetch from 'node-fetch';
 import cors from 'cors';
 import express = require('express');
 
-const port: number | string = process.env.PORT || 8080;
+const port: number | string = process.env.PORT || 8000;
 const app = express();
-const requestLimit: string = process.env.LIMIT || '1gb';
+//const requestLimit: string = process.env.LIMIT || '100kb';
 
-app.use(bodyParser.json({ limit: requestLimit }));
+//app.use(bodyParser.json({ limit: requestLimit }));
 app.use(cors());
 
 app.all('*', (req, res) => {
