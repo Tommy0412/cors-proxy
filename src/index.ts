@@ -1,10 +1,10 @@
 import dotenv from 'dotenv'; dotenv.config();
 //import bodyParser from 'body-parser';
-//import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 import cors from 'cors';
 import express = require('express');
 
-const port: number | string = process.env.PORT || 8000;
+const port: number | string = process.env.PORT || 10000;
 const app = express();
 //const requestLimit: string = process.env.LIMIT || '100kb';
 
