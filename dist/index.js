@@ -5,14 +5,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const body_parser_1 = __importDefault(require("body-parser"));
+//import bodyParser from 'body-parser';
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const cors_1 = __importDefault(require("cors"));
 const express = require("express");
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 10000;
 const app = express();
-const requestLimit = process.env.LIMIT || '1gb';
-app.use(body_parser_1.default.json({ limit: requestLimit }));
+//const requestLimit: string = process.env.LIMIT || '100kb';
+//app.use(bodyParser.json({ limit: requestLimit }));
 app.use(cors_1.default());
 app.all('*', (req, res) => {
     res.set({
